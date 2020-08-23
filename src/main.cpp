@@ -1,11 +1,14 @@
-#include <stdio.h>
 #include <SDL2/SDL.h>
-#include <stdbool.h>
+#include <cstdbool>
+#include <cstdio>
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
     setvbuf(stdout, NULL, _IONBF, 0);
-    printf("Start\n");
+
+    printf("> Program is started \n");
+
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
         printf("Failed to initialise SDL\n");
@@ -54,6 +57,8 @@ int main(int argc, char *argv[])
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+
+    printf("> Program is ended \n");
 
     return 0;
 }
