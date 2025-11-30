@@ -9,7 +9,7 @@ set compilator=g++
 REM Indicate the Current Working Directory - leave ".\" if you launch this script from the root of your project
 set cwd=.\
 REM Indicate the name of the file with extention you want to compile / with extension ".c" for C or ".cpp" for C++
-set srcFileName=main.cpp
+set srcFileName=*.cpp
 REM Choose temporary output folder name
 set bindir=bin
 REM Indicate the source directory name of your project
@@ -54,10 +54,9 @@ REM Clean temporary folder
 
 REM Compile project regarding the configuration on the top of this file
 :compile
-    if %cleaned% == 0 goto clean
     IF NOT EXIST %bindir% mkdir %bindir% && echo - Create temporary folder && echo Temporary folder is created > con
     echo - Start compilation
-    %compilator% -g %saveTmpOption% %cwd%\%srcdir%\%srcFileName% %LIB% %library% -o %cwd%\%bindir%\%outputFileName% > con
+    %compilator% -g -std=c++17 %saveTmpOption% %cwd%\%srcdir%\%srcFileName% %LIB% %library% -o %cwd%\%bindir%\%outputFileName% > con
     echo Compilation is done without error.
     echo - Copy %sdlDll% to temporary folder
     copy %sdlDll% %bindir% > con
