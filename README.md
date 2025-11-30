@@ -18,6 +18,8 @@ Prérequis avant de pouvoir utiliser les taches de compilations et le debuggeur 
 * Modifier le fichier _c_cpp_properties.json_ : 
   * Renseigner le chemin vers votre installation de MSYS2 "__compilerPath__" si besoin.
 
+> **Note :** Le template est configuré pour chercher `gdb.exe` et `g++.exe` dans `C:\msys64\mingw64\bin\`. Si vous avez installé MSYS2 ailleurs, pensez à mettre à jour ces chemins.
+
 ## __Compiler et lancer l'application__
 
 * Dans le menu : Terminal > Run Task...
@@ -48,7 +50,7 @@ __[Clean]__ - Nettoye le dossier temporaire /bin
 
 ## __Debugger__
 
-**Lancer la commande Run / Start Debugging du menu de Visal Studio Code pour commencer a debugger** (Ne fonctionne pas actuellement, en cours de correction)
+**Lancer la commande Run / Start Debugging (F5) du menu de Visual Studio Code pour commencer à debugger.**
 
 **__N'hésitez pas à regarder__**
 
