@@ -4,7 +4,15 @@
         {
             "type": "shell",
             "label": "[Compile]",
-            "command": "./Makefile.bat",
+            "windows": {
+                "command": "./Makefile.bat"
+            },
+            "linux": {
+                "command": "make"
+            },
+            "osx": {
+                "command": "make"
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -16,10 +24,18 @@
         {
             "type": "shell",
             "label": "[Run]",
-            "command": "./Makefile.bat",
-            "args": [
-                "-r"
-            ],
+            "windows": {
+                "command": "./Makefile.bat",
+                "args": ["-r"]
+            },
+            "linux": {
+                "command": "make",
+                "args": ["run"]
+            },
+            "osx": {
+                "command": "make",
+                "args": ["run"]
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -31,10 +47,18 @@
         {
             "type": "shell",
             "label": "[Compile & Run]",
-            "command": "./Makefile.bat",
-            "args": [
-                "-cr"
-            ],
+            "windows": {
+                "command": "./Makefile.bat",
+                "args": ["-cr"]
+            },
+            "linux": {
+                "command": "make",
+                "args": ["run"]
+            },
+            "osx": {
+                "command": "make",
+                "args": ["run"]
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -46,10 +70,18 @@
         {
             "type": "shell",
             "label": "[Clean]",
-            "command": "./Makefile.bat",
-            "args": [
-                "-c"
-            ],
+            "windows": {
+                "command": "./Makefile.bat",
+                "args": ["-c"]
+            },
+            "linux": {
+                "command": "make",
+                "args": ["clean"]
+            },
+            "osx": {
+                "command": "make",
+                "args": ["clean"]
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
