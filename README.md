@@ -20,6 +20,24 @@ Prérequis avant de pouvoir utiliser les taches de compilations et le debuggeur 
 
 > **Note :** Le template est configuré pour chercher `gdb.exe` et `g++.exe` dans `C:\msys64\mingw64\bin\`. Si vous avez installé MSYS2 ailleurs, pensez à mettre à jour ces chemins.
 
+## __Installation (Linux)__
+
+Installer les dépendances nécessaires (compilateur et bibliothèque SDL2) via le terminal :
+```bash
+sudo apt-get update
+sudo apt-get install build-essential libsdl2-dev gdb
+```
+
+## __Installation (macOS)__
+
+Installer Xcode Command Line Tools et [Homebrew](https://brew.sh/), puis installer SDL2 :
+```bash
+xcode-select --install
+brew install sdl2
+```
+
+> **Note pour Apple Silicon :** Le template est configuré pour chercher les headers SDL2 dans `/opt/homebrew/include/SDL2`.
+
 ## __Compiler et lancer l'application__
 
 * Dans le menu : Terminal > Run Task...
